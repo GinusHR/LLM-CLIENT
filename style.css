@@ -1,103 +1,22 @@
-/* body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #eef2f3, #8e9eab);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.form-container {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-}
-
-h2 {
-    margin-top: 0;
-    text-align: center;
-    color: #2c3e50;
-    font-size: 24px;
-}
-
-.input-group {
-    display: flex;
-    gap: 10px;
-    margin-top: 1rem;
-}
-
-.text-input {
-    flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: border-color 0.2s;
-}
-
-.text-input:focus {
-    border-color: #4a90e2;
-    outline: none;
-}
-
-.submit-button {
-    background-color: #4a90e2;
-    color: #fff;
-    padding: 0.75rem 1.25rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-    background-color: #357ABD;
-}
-
-.result-container {
-    margin-top: 1.5rem;
-    padding: 1.25rem;
-    background-color: #f4f6f8;
-    border-left: 4px solid #4a90e2;
-    border-radius: 8px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.03);
-}
-
-.result-container h3 {
-    margin-top: 0;
-    color: #2c3e50;
-    font-size: 20px;
-}
-
-.result-text {
-    min-height: 50px;
-    line-height: 1.6;
-    color: #34495e;
-    font-size: 16px;
-} */
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f9;
+    background: linear-gradient(#2e1a09, #0b0b0b); /* donkerbruin naar zwart */
+    color: #f0e6d2;
 }
 
 .chat-container {
     width: 400px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #3b2f2f; /* donker perkament */
+    border: 2px solid #a6794d; /* gouden rand */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -107,48 +26,79 @@ body {
     flex: 1;
     padding: 16px;
     overflow-y: auto;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #a6794d;
 }
 
 .chat-message {
     margin-bottom: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 80%;
 }
 
 .chat-message.user {
+    align-self: flex-end;
+    background-color: #5e503f; /* warm bruin */
+    color: #f0e6d2;
     text-align: right;
-    background-color: white;
 }
 
 .chat-message.ai {
+    align-self: flex-start;
+    background-color: #40342d; /* donkergrijs/bruin */
+    color: #f0e6d2;
     text-align: left;
-    background-color: rgb(248, 241, 241);
 }
 
 .input-container {
     display: flex;
     padding: 8px;
-    background: #f9f9f9;
+    background: #2c221b; /* donkerbruin */
 }
 
 .input-container input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #a6794d;
     border-radius: 4px;
     font-size: 14px;
+    background-color: #3b2f2f;
+    color: #f0e6d2;
 }
 
 .input-container button {
     margin-left: 8px;
     padding: 10px 16px;
     border: none;
-    background: #007bff;
-    color: #fff;
+    background: #a6794d; /* goudkleur */
+    color: #1e1307;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
+    font-weight: bold;
 }
 
 .input-container button:hover {
-    background: #0056b3;
+    background: #8b5a2b;
+}
+
+#lotr1 {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 24px;
+    background: #a6794d; /* goudkleur */
+    color: #1e1307; /* donkere tekst */
+    border: 2px solid #a6794d;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s, transform 0.2s;
+}
+
+#lotr1:hover {
+    background: #8b5a2b;
+    transform: scale(1.05);
 }
