@@ -87,6 +87,6 @@ function addMessageHistory(data, from = "ai") {
       chatBox.appendChild(aiMessage);
 
       chatBox.scrollTop = chatBox.scrollHeight;
-    }, 1000);
+    }, 500);
   }
 }
