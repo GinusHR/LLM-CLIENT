@@ -2,8 +2,6 @@ const btn = document.querySelector("#submitButton");
 const field = document.querySelector("#messageInput");
 const endresult = document.querySelector("#result");
 const lotr1 = document.querySelector("#lotr1");
-const lotr2 = document.querySelector("#lotr2");
-const lotr3 = document.querySelector("#lotr3");
 
 let id = "5cd95395de30eff6ebccde5d";
 
@@ -25,7 +23,7 @@ async function startGame(e) {
     const data = await response.json();
     console.log(data.question);
     // endresult.innerText = data.message;
-    addMessageHistory(data.question);
+    addMessageHistory(data.question, "ai");
   } else {
     console.error(response.status);
   }
@@ -49,13 +47,13 @@ async function askQuestion(e) {
     const data = await response.json();
     console.log(data.message);
     // endresult.innerText = data.message;
-    addMessageHistory(data.message);
+    addMessageHistory(data.message, "user");
   } else {
     console.error(response.status);
   }
 }
 
-function addMessageHistory(data, from = "ai") {
+function addMessageHistory(data, from) {
   console.log(data);
   const chatBox = document.getElementById("chatBox");
 
